@@ -17,40 +17,40 @@ parameters:
   displayName: Jenkins Password
   value: password
   name: JENKINS_PASSWORD
-  required: true
+  required: false
 - description: Password for the Gogs user.
   displayName: Gogs Password
   value: password
   name: GOGS_PASSWORD
-  required: true
+  required: false
 - description: Username for PostgreSQL backend
   displayName: PostgreSQL User
   from: user[A-Z0-9]{3}
   generate: expression
   name: POSTGRESQL_USER
-  required: true
+  required: false
 - description: Password for Gogs Git Server PostgreSQL backend
   displayName: Gogs' PostgreSQL Password
   from: '[a-zA-Z0-9]{16}'
   generate: expression
   name: GOGS_POSTGRESQL_PASSWORD
-  required: true
+  required: false
 - description: Password for SonarQube Server PostgreSQL backend
   displayName: SonarQube's PostgreSQL Password
   from: '[a-zA-Z0-9]{16}'
   generate: expression
   name: SONAR_POSTGRESQL_PASSWORD
-  required: true
+  required: false
 - description: DEV project name
   displayName: DEV project name
   value: dev
   name: DEV_PROJECT
-  required: true
+  required: false
 - description: STAGE project name
   displayName: STAGE project name
   value: stage
   name: STAGE_PROJECT
-  required: true
+  required: false
 objects:
 # Pipeline
 - apiVersion: v1
